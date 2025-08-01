@@ -10,19 +10,27 @@
     "postinstall": "prisma generate"
   },
   "dependencies": {
+    "@apollo/server": "^5.0.0",
+    "@as-integrations/next": "^4.0.0",
     "@prisma/client": "^6.13.0",
+    "@tanstack/react-query": "^5.84.0",
+    "axios": "^1.11.0",
+    "graphql": "^16.11.0",
+    "graphql-tag": "^2.12.6",
     "next": "15.4.5",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-toastify": "^11.0.5"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "^4",
     "@types/node": "^20.0.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "eslint": "^9.0.0",
     "eslint-config-next": "15.4.5",
     "prisma": "^6.13.0",
+    "tailwindcss": "^4",
     "typescript": "^5.0.0"
   }
 }

@@ -1,10 +1,9 @@
-import React from "react";
-import Test from "./Test";
+import SendMessagePage from "./SendMessagePage";
 
 const page = () => {
   return (
     <div>
-      <Test />
+      <SendMessagePage />
     </div>
   );
 };

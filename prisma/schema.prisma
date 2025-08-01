@@ -7,12 +7,21 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model Chat {
+  id          Int       @id @default(autoincrement())
+  name        String
+  lastMessage String?
+  messages    Message[]
+
+  @@map("chat")
+}
+
 model Message {
-  id        Int      @id @default(autoincrement())
-  content   String
-  sender    String // e.g., "user" or "bot"
-  receiver  String
-  createdAt DateTime @default(now())
+  id     Int    @id @default(autoincrement())
+  text   String
+  sender String @default("System") // or make required via mutation input
+  chat   Chat   @relation(fields: [chatId], references: [id])
+  chatId Int
 
   @@map("message")
 }
